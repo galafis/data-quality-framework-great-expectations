@@ -56,3 +56,9 @@ The goal is to provide a practical guide for implementing a data quality culture
 *   **Data Profiling**: Generation of statistical profiles of the data to understand its distribution and characteristics.
 *   **Pipeline Integration**: Examples of how to integrate Great Expectations with workflow orchestrators like Apache Airflow.
 
+## Improved Great Expectations Repository
+
+### Additional Content
+- Data validation suites
+- Automated data profiling
+- Integration with data pipelines
