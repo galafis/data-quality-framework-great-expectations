@@ -1,0 +1,111 @@
+{
+  "expectation_suite_name": "sales_data_quality_suite",
+  "data_asset_type": "Dataset",
+  "meta": {
+    "great_expectations_version": "0.18.0",
+    "author": "Gabriel Demetrios Lafis",
+    "description": "Data quality expectations for sales data"
+  },
+  "expectations": [
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "min_value": 1000,
+        "max_value": 100000
+      },
+      "meta": {
+        "notes": "Ensure the dataset has a reasonable number of records"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {
+        "notes": "Order ID should never be null"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {
+        "notes": "Order ID should be unique"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "customer_id"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "ship_mode",
+        "value_set": ["Standard Class", "Second Class", "First Class", "Same Day"]
+      },
+      "meta": {
+        "notes": "Ship mode should be one of the valid values"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "sales",
+        "min_value": 0,
+        "max_value": 100000
+      },
+      "meta": {
+        "notes": "Sales should be positive and within reasonable range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "quantity",
+        "min_value": 1,
+        "max_value": 1000
+      },
+      "meta": {
+        "notes": "Quantity should be at least 1 and within reasonable range"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "discount",
+        "min_value": 0,
+        "max_value": 1
+      },
+      "meta": {
+        "notes": "Discount should be between 0 and 1 (0% to 100%)"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "order_date",
+        "regex": "^\\d{2}/\\d{2}/\\d{4}$"
+      },
+      "meta": {
+        "notes": "Order date should be in MM/DD/YYYY format"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "category"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "category",
+        "value_set": ["Furniture", "Office Supplies", "Technology"]
+      }
+    }
+  ]
+}
