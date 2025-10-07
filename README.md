@@ -62,3 +62,9 @@ The goal is to provide a practical guide for implementing a data quality culture
 - Data validation suites
 - Automated data profiling
 - Integration with data pipelines
+## Improved Great Expectations Repository
+
+### Additional Content
+- Data validation suites
+- Automated data profiling
+- Integration with data pipelines
