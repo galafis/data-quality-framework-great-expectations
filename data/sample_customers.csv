@@ -1,0 +1,11 @@
+customer_id,name,email,age,country,registration_date
+CUST123456,John Doe,john.doe@example.com,35,US,2023-01-15
+CUST234567,Jane Smith,jane.smith@example.com,28,UK,2023-02-20
+CUST345678,Carlos Silva,carlos.silva@example.com,42,BR,2023-03-10
+CUST456789,Emma Wilson,emma.wilson@example.com,31,CA,2023-04-05
+CUST567890,Hans Mueller,hans.mueller@example.com,45,DE,2023-05-12
+CUST678901,Marie Dubois,marie.dubois@example.com,38,FR,2023-06-18
+CUST789012,Robert Brown,robert.brown@example.com,29,US,2023-07-22
+CUST890123,Sophie Chen,sophie.chen@example.com,33,UK,2023-08-30
+CUST901234,Luigi Rossi,luigi.rossi@example.com,40,BR,2023-09-14
+CUST012345,Anna Schmidt,anna.schmidt@example.com,27,DE,2023-10-08
