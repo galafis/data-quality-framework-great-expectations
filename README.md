@@ -99,34 +99,37 @@ Great Expectations é o padrão da indústria para qualidade de dados:
 
 ```
 data-quality-framework-great-expectations/
-├── great_expectations/
-│   ├── expectations/
-│   │   ├── sales_data_suite.json         # Suite de vendas
-│   │   ├── customer_data_suite.json      # Suite de clientes
-│   │   └── product_data_suite.json       # Suite de produtos
-│   ├── checkpoints/
-│   │   ├── daily_validation.yml          # Validação diária
-│   │   └── pre_warehouse_load.yml        # Pré-carga DW
-│   ├── plugins/
-│   │   └── custom_expectations/
-│   │       └── expect_column_to_be_email.py
-│   └── great_expectations.yml            # Configuração principal
-├── notebooks/
-│   ├── 01_create_expectations.ipynb      # Criar expectativas
-│   ├── 02_validate_data.ipynb            # Validar dados
-│   └── 03_integrate_airflow.ipynb        # Integração Airflow
-├── data/
-│   ├── sample_sales.csv                  # Dados de exemplo
-│   └── sample_customers.csv
-├── src/
-│   ├── validate_data.py                  # Script de validação
-│   ├── profile_data.py                   # Profiling automatizado
-│   └── airflow_integration.py            # Integração com Airflow
-├── tests/
-│   └── test_custom_expectations.py       # Testes unitários
-├── requirements.txt
-└── README.md
+├── 📁 great_expectations/              # Configuração Great Expectations
+│   └── 📁 expectations/
+│       └── sales_data_suite.json       # ✅ Suite de validação de vendas
+├── 📁 notebooks/                       # Scripts e exemplos
+│   ├── validate_data.py                # ✅ Script de validação simples
+│   ├── example_profiling.py            # ✅ Profiling de dados
+│   └── example_great_expectations.py   # ✅ Exemplo completo GX
+├── 📁 data/                            # Dados de exemplo
+│   ├── sample_sales.csv                # ✅ Dados de vendas
+│   └── sample_customers.csv            # ✅ Dados de clientes
+├── 📁 tests/                           # Testes automatizados
+│   ├── __init__.py                     # ✅ Inicialização do pacote
+│   ├── test_validate_data.py           # ✅ Testes do script validação
+│   └── test_expectations.py            # ✅ Testes das expectation suites
+├── 📁 images/                          # Imagens e diagramas
+│   └── quality_workflow.png            # ✅ Diagrama do workflow
+├── 📁 .github/workflows/               # CI/CD GitHub Actions
+│   └── tests.yml                       # ✅ Workflow de testes
+├── 📄 .gitignore                       # ✅ Arquivos ignorados pelo Git
+├── 📄 pytest.ini                       # ✅ Configuração do pytest
+├── 📄 requirements.txt                 # ✅ Dependências do projeto
+├── 📄 LICENSE                          # ✅ Licença MIT
+├── 📄 CONTRIBUTING.md                  # ✅ Guia de contribuição
+├── 📄 CODE_OF_CONDUCT.md               # ✅ Código de conduta
+└── 📄 README.md                        # ✅ Documentação principal
 ```
+
+**Legenda:**
+- ✅ = Implementado e testado
+- 📁 = Diretório
+- 📄 = Arquivo
 
 ### 🚀 Instalação e Configuração
 
@@ -557,7 +560,33 @@ python notebooks/validate_data.py
 # ✓ Date Format: PASSED
 ```
 
-**Exemplo 2: Criar Nova Expectation Suite**
+**Exemplo 2: Profiling de Dados**
+
+```bash
+# Execute o script de profiling
+python notebooks/example_profiling.py
+
+# Saída: Estatísticas completas sobre os dados
+# - Número de linhas/colunas
+# - Tipos de dados
+# - Valores nulos
+# - Estatísticas descritivas
+# - Problemas potenciais detectados
+```
+
+**Exemplo 3: Validação com Great Expectations**
+
+```bash
+# Execute o exemplo completo de validação
+python notebooks/example_great_expectations.py
+
+# Saída: Validação detalhada usando expectation suites
+# - Validações de todas as expectativas definidas
+# - Resultados individuais de cada validação
+# - Resumo com taxa de sucesso
+```
+
+**Exemplo 4: Criar Nova Expectation Suite**
 
 ```python
 import great_expectations as gx
