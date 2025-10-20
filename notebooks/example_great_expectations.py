@@ -88,7 +88,9 @@ def validate_sales_data():
             if column in df.columns:
                 min_val = kwargs.get('min_value')
                 max_val = kwargs.get('max_value')
-                out_of_range = df[(df[column] < min_val) | (df[column] > max_val)][column].count()
+                # Filter out NaN values before range check
+                valid_values = df[column].dropna()
+                out_of_range = valid_values[(valid_values < min_val) | (valid_values > max_val)].count()
                 passed = out_of_range == 0
                 print(f"   Column: {column}")
                 print(f"   Expected range: {min_val} - {max_val}")
@@ -101,7 +103,12 @@ def validate_sales_data():
             column = kwargs.get('column')
             regex = kwargs.get('regex')
             if column in df.columns:
-                matches = df[column].astype(str).str.match(regex).sum()
+                # Only convert to string if not already a string type
+                if not pd.api.types.is_string_dtype(df[column]):
+                    values_to_check = df[column].astype(str)
+                else:
+                    values_to_check = df[column]
+                matches = values_to_check.str.match(regex).sum()
                 passed = matches == len(df)
                 print(f"   Column: {column}")
                 print(f"   Pattern: {regex}")

@@ -48,8 +48,8 @@ def profile_dataset(csv_path):
         if pd.api.types.is_numeric_dtype(df[col]):
             print(f"  Min: {df[col].min()}")
             print(f"  Max: {df[col].max()}")
-            print(f"  Mean: {df[col].mean():.2f}")
-            print(f"  Median: {df[col].median():.2f}")
+            print(f"  Mean: {df[col].mean(skipna=True):.2f}")
+            print(f"  Median: {df[col].median(skipna=True):.2f}")
     
     # Data quality summary
     print("\n✅ DATA QUALITY SUMMARY")
