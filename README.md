@@ -3,13 +3,9 @@
 <div align="center">
 
 ![Great Expectations](https://img.shields.io/badge/Great%20Expectations-FF6138?style=for-the-badge&logo=great-expectations&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Data Quality](https://img.shields.io/badge/Data_Quality-00C853?style=for-the-badge)
-
-[![Tests](https://github.com/galafis/data-quality-framework-great-expectations/actions/workflows/tests.yml/badge.svg)](https://github.com/galafis/data-quality-framework-great-expectations/actions/workflows/tests.yml)
-[![Coverage](https://img.shields.io/badge/coverage-93%25-brightgreen)](https://github.com/galafis/data-quality-framework-great-expectations)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
 
 *Framework profissional completo para garantir qualidade, confiabilidade e consistência dos dados em projetos enterprise*
 
