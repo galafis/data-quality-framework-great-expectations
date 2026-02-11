@@ -111,8 +111,6 @@ data-quality-framework-great-expectations/
 │   └── test_expectations.py            # ✅ Testes das expectation suites
 ├── 📁 images/                          # Imagens e diagramas
 │   └── quality_workflow.png            # ✅ Diagrama do workflow
-├── 📁 .github/workflows/               # CI/CD GitHub Actions
-│   └── tests.yml                       # ✅ Workflow de testes
 ├── 📄 .gitignore                       # ✅ Arquivos ignorados pelo Git
 ├── 📄 pytest.ini                       # ✅ Configuração do pytest
 ├── 📄 requirements.txt                 # ✅ Dependências do projeto
@@ -734,19 +732,6 @@ O projeto mantém **93% de cobertura de código**, garantindo que:
 - ✅ Validações produzem resultados esperados
 - ✅ Estruturas de dados estão corretas
 
-#### Integração Contínua (CI/CD)
-
-O projeto usa GitHub Actions para executar testes automaticamente:
-
-```yaml
-# .github/workflows/tests.yml
-- Executa em Python 3.9, 3.10, 3.11, 3.12
-- Testa em cada push e pull request
-- Gera relatórios de cobertura
-```
-
-![CI/CD Workflow](images/quality_workflow.png)
-
 ### 🤝 Contribuindo
 
 Contribuições são bem-vindas! Por favor, leia nosso [Guia de Contribuição](CONTRIBUTING.md) para detalhes sobre o processo.
@@ -827,7 +812,6 @@ pytest -v --cov=notebooks --cov-report=term-missing
 **Test Structure:**
 - ✅ Unit tests for validation scripts
 - ✅ Integration tests for expectation suites
-- ✅ CI/CD with GitHub Actions
 - ✅ Automated testing on Python 3.9, 3.10, 3.11, 3.12
 
 ### 📚 Features
@@ -835,7 +819,6 @@ pytest -v --cov=notebooks --cov-report=term-missing
 - ✅ **Pre-configured Expectation Suites**: Ready-to-use validation suites
 - ✅ **Sample Data**: Example datasets for testing
 - ✅ **Comprehensive Tests**: 93% code coverage
-- ✅ **CI/CD Integration**: GitHub Actions workflow
 - ✅ **Documentation**: Detailed README with examples
 - ✅ **Best Practices**: Following industry standards
 
