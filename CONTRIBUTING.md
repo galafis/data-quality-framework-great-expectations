@@ -93,13 +93,12 @@ If you find a bug or have a suggestion:
 
 ```
 data-quality-framework-great-expectations/
-├── great_expectations/       # Great Expectations configuration
-│   └── expectations/        # Expectation suites
-├── notebooks/               # Python scripts and notebooks
+├── great_expectations/       # Expectation suite definitions
+│   └── expectations/        # Expectation suites (JSON)
+├── notebooks/               # Python scripts
 ├── data/                    # Sample data files
 ├── tests/                   # Test files
 ├── images/                  # Documentation images
-├── .github/workflows/       # CI/CD workflows
 └── README.md               # Project documentation
 ```
 
